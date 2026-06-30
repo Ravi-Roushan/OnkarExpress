@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onkar Express - Courier & Cargo Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="announce">
+  <i class="ti ti-truck-delivery"></i> All Bihar Booking Available | Patna to Bhagalpur Same Day Dispatch
+  <i class="ti ti-phone"></i> Call: 7488878760 / 9102004674
+</div>
+
+<nav>
+  <div class="logo">
+    <div class="logo-box"><span>ONKAR EXPRESS</span></div>
+    <div>
+      <div style="color:#fff;font-size:13px;font-weight:600;letter-spacing:.5px">Courier & Cargo Service</div>
+      <div class="logo-sub">All Bihar Booking</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#track">Track</a></li>
+    <li><a href="#routes">Routes</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('track').scrollIntoView({behavior:'smooth'})">
+    <i class="ti ti-search"></i> Track Shipment
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge"><i class="ti ti-truck"></i> Bihar's Trusted Courier Network</div>
+      <h1>Fast & Reliable<br><span>Courier Across</span><br>All Bihar</h1>
+      <p class="hero-tagline">From Patna to Bhagalpur and every city in between — door-to-door delivery with real-time tracking.</p>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Cities Covered</div></div>
+        <div class="stat"><div class="stat-num">24hr</div><div class="stat-label">Express Delivery</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Safe Handling</div></div>
+      </div>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('track').scrollIntoView({behavior:'smooth'})">
+          <i class="ti ti-search"></i> Track Your Parcel
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Book Now
+        </button>
+      </div>
+    </div>
+    <div id="track" class="track-box">
+      <h3><i class="ti ti-map-pin"></i> Live Shipment Tracker</h3>
+      <div class="track-input-row">
+        <input type="text" id="trackInput" placeholder="Enter AWB / Tracking Number (e.g. OE2024001)" />
+        <button onclick="trackShipment()">TRACK</button>
+      </div>
+      <p style="font-size:12px;color:rgba(255,255,255,.4);margin-bottom:.5rem">Enter the tracking number you received after booking.</p>
+      <div id="trackResult" class="track-result">
+        <div id="trackSteps"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTES -->
+<section id="routes" class="routes-section">
+  <div class="section-inner">
+    <p class="section-label">Our Network</p>
+    <h2 class="section-title">Routes We Cover</h2>
+    <p class="section-sub">Daily dispatches from Patna to all major cities in Bihar — reliable, affordable, fast.</p>
+    <div class="routes-grid">
+      <div class="route-card">
+        <div class="route-badge">EXPRESS</div>
+        <div class="route-from-to">
+          <span class="city-tag">Patna</span>
+          <i class="ti ti-arrow-right arrow-icon"></i>
+          <span class="city-tag">Bhagalpur</span>
+        </div>
+        <div class="route-cities">Via: <span>कहलगाँव, नौगछिया, बाँका</span></div>
+        <div style="margin-top:.75rem;font-size:12px;color:var(--muted);display:flex;gap:1rem">
+          <span><i class="ti ti-clock" style="font-size:14px"></i> 24-36 hrs</span>
+          <span><i class="ti ti-circle-check" style="font-size:14px;color:var(--green)"></i> Daily Dispatch</span>
+        </div>
+      </div>
+      <div class="route-card">
+        <div class="route-badge" style="background:var(--green)">REGULAR</div>
+        <div class="route-from-to">
+          <span class="city-tag">Patna</span>
+          <i class="ti ti-arrow-right arrow-icon"></i>
+          <span class="city-tag">Sultanganj</span>
+        </div>
+        <div class="route-cities">Via: <span>सुलतानगंज, साहेबगंज, पिरपैती</span></div>
+        <div style="margin-top:.75rem;font-size:12px;color:var(--muted);display:flex;gap:1rem">
+          <span><i class="ti ti-clock" style="font-size:14px"></i> 36-48 hrs</span>
+          <span><i class="ti ti-circle-check" style="font-size:14px;color:var(--green)"></i> Daily Dispatch</span>
+        </div>
+      </div>
+      <div class="route-card">
+        <div class="route-from-to">
+          <span class="city-tag">Patna</span>
+          <i class="ti ti-arrow-right arrow-icon"></i>
+          <span class="city-tag">Godda</span>
+        </div>
+        <div class="route-cities">Via: <span>गोड्डा, अमरपुर, जगदीशपुर</span></div>
+        <div style="margin-top:.75rem;font-size:12px;color:var(--muted);display:flex;gap:1rem">
+          <span><i class="ti ti-clock" style="font-size:14px"></i> 48 hrs</span>
+          <span><i class="ti ti-circle-check" style="font-size:14px;color:var(--green)"></i> 3x Week</span>
+        </div>
+      </div>
+      <div class="route-card">
+        <div class="route-from-to">
+          <span class="city-tag">Patna</span>
+          <i class="ti ti-arrow-right arrow-icon"></i>
+          <span class="city-tag">Muzaffarpur</span>
+        </div>
+        <div class="route-cities">Via: <span>बाराहाट, बौंसी एवं मुजफ्फरपुर</span></div>
+        <div style="margin-top:.75rem;font-size:12px;color:var(--muted);display:flex;gap:1rem">
+          <span><i class="ti ti-clock" style="font-size:14px"></i> 24-36 hrs</span>
+          <span><i class="ti ti-circle-check" style="font-size:14px;color:var(--green)"></i> Daily Dispatch</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section style="padding:5rem 2rem;background:var(--dark)">
+  <div class="section-inner">
+    <p class="section-label" style="color:var(--yellow)">Live Network Map</p>
+    <h2 class="section-title" style="color:#fff">Our Coverage Across Bihar</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.6)">Real-time visualization of our active courier routes and hub locations.</p>
+    <div style="margin-top:2.5rem">
+      <div class="bihar-map-wrap">
+        <svg class="map-svg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 80 100 L 140 70 L 220 60 L 320 55 L 420 50 L 520 60 L 620 80 L 700 120 L 720 200 L 700 280 L 650 340 L 560 370 L 450 380 L 340 375 L 240 360 L 160 320 L 100 260 L 70 180 Z"
+                fill="rgba(22,48,80,0.8)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <line x1="180" y1="200" x2="280" y2="190" class="route-line"/>
+          <line x1="280" y1="190" x2="380" y2="185" class="route-line"/>
+          <line x1="380" y1="185" x2="460" y2="175" class="route-line"/>
+          <line x1="460" y1="175" x2="540" y2="165" class="route-line"/>
+          <line x1="540" y1="165" x2="600" y2="155" class="route-line"/>
+          <line x1="600" y1="155" x2="650" y2="170" class="route-line"/>
+          <line x1="380" y1="185" x2="400" y2="280" class="route-line" style="stroke:rgba(76,175,80,0.7)"/>
+          <line x1="180" y1="200" x2="200" y2="140" class="route-line" style="stroke:rgba(255,152,0,0.7)"/>
+          <g class="city-node">
+            <circle cx="180" cy="200" r="10" fill="#FDD835" stroke="#fff" stroke-width="2.5"/>
+            <circle cx="180" cy="200" r="18" fill="rgba(253,216,53,0.15)" stroke="rgba(253,216,53,0.3)" stroke-width="1"/>
+            <text x="180" y="228" class="city-label" text-anchor="middle" font-size="13" font-weight="700">Patna</text>
+            <text x="180" y="242" text-anchor="middle" font-size="10" fill="rgba(253,216,53,0.8)">HUB</text>
+          </g>
+          <g class="city-node"><circle cx="280" cy="190" r="6" fill="#FDD835" stroke="#fff" stroke-width="1.5"/><text x="280" y="210" class="city-label" text-anchor="middle" font-size="11">Barh</text></g>
+          <g class="city-node"><circle cx="380" cy="185" r="7" fill="#FDD835" stroke="#fff" stroke-width="1.5"/><text x="380" y="205" class="city-label" text-anchor="middle" font-size="11">Kahalgaon</text></g>
+          <g class="city-node"><circle cx="460" cy="175" r="6" fill="#FDD835" stroke="#fff" stroke-width="1.5"/><text x="460" y="195" class="city-label" text-anchor="middle" font-size="11">Sultanganj</text></g>
+          <g class="city-node"><circle cx="540" cy="165" r="6" fill="#FDD835" stroke="#fff" stroke-width="1.5"/><text x="540" y="185" class="city-label" text-anchor="middle" font-size="11">Naugachia</text></g>
+          <g class="city-node">
+            <circle cx="650" cy="170" r="8" fill="#4CAF50" stroke="#fff" stroke-width="2"/>
+            <circle cx="650" cy="170" r="15" fill="rgba(76,175,80,0.15)" stroke="rgba(76,175,80,0.3)" stroke-width="1"/>
+            <text x="650" y="195" class="city-label" text-anchor="middle" font-size="13" font-weight="700">Bhagalpur</text>
+          </g>
+          <g class="city-node"><circle cx="400" cy="280" r="6" fill="#FF9800" stroke="#fff" stroke-width="1.5"/><text x="400" y="300" class="city-label" text-anchor="middle" font-size="11" fill="#FF9800">Godda</text></g>
+          <g class="city-node"><circle cx="200" cy="140" r="6" fill="#FF9800" stroke="#fff" stroke-width="1.5"/><text x="200" y="125" class="city-label" text-anchor="middle" font-size="11" fill="#FF9800">Muzaffarpur</text></g>
+          <g class="city-node"><circle cx="580" cy="200" r="5" fill="#FDD835" stroke="#fff" stroke-width="1.5"/><text x="580" y="218" class="city-label" text-anchor="middle" font-size="10">Sahebganj</text></g>
+          <g class="city-node"><circle cx="500" cy="215" r="5" fill="#FDD835" stroke="#fff" stroke-width="1.5"/><text x="500" y="232" class="city-label" text-anchor="middle" font-size="10">Banka</text></g>
+          <text x="300" y="178" font-size="16">🚚</text>
+          <rect x="30" y="30" width="130" height="95" rx="6" fill="rgba(0,0,0,0.6)" stroke="rgba(255,255,255,0.1)"/>
+          <text x="44" y="50" fill="#FDD835" font-size="12" font-weight="700">LEGEND</text>
+          <circle cx="44" cy="64" r="5" fill="#FDD835"/>
+          <text x="56" y="68" fill="rgba(255,255,255,0.7)" font-size="11">Main Hub</text>
+          <circle cx="44" cy="82" r="4" fill="#4CAF50"/>
+          <text x="56" y="86" fill="rgba(255,255,255,0.7)" font-size="11">Destination Hub</text>
+          <circle cx="44" cy="100" r="3" fill="#FF9800"/>
+          <text x="56" y="104" fill="rgba(255,255,255,0.7)" font-size="11">Secondary City</text>
+          <line x1="36" y1="117" x2="55" y2="117" stroke="#FDD835" stroke-width="2" stroke-dasharray="4,2"/>
+          <text x="60" y="121" fill="rgba(255,255,255,0.7)" font-size="11">Active Route</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Comprehensive courier and cargo solutions tailored for businesses and individuals across Bihar.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-package"></i></div>
+        <h4>Door-to-Door Delivery</h4>
+        <p>Pick up from your doorstep and deliver right to the recipient's address.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-building-warehouse"></i></div>
+        <h4>Cargo Service</h4>
+        <p>Heavy cargo and bulk goods transported safely with full insurance coverage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-bolt"></i></div>
+        <h4>Express Delivery</h4>
+        <p>Same-day and next-day express service for urgent documents and parcels.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-map-search"></i></div>
+        <h4>Live Tracking</h4>
+        <p>Real-time shipment tracking with SMS and call updates at every stage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-file-invoice"></i></div>
+        <h4>Document Courier</h4>
+        <p>Safe, fast courier for legal documents, certificates, and business papers.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-building-store"></i></div>
+        <h4>Business Accounts</h4>
+        <p>Monthly billing and priority service for regular business customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">Book a Shipment</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-phone"></i></div>
+          <div class="contact-detail">
+            <strong>Sanjay </strong>
+            <span>7488878760 | 9102004674</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-map-pin"></i></div>
+          <div class="contact-detail">
+            <strong>Office Address</strong>
+            <span>Post Office Lane, Jamal Road, Patna - 800001, Bihar</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-mail"></i></div>
+          <div class="contact-detail">
+            <strong>Email</strong>
+            <span>onkarexpress123@gmail.com</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-file-certificate"></i></div>
+          <div class="contact-detail">
+            <strong>GSTIN</strong>
+            <span>10AMBPK1696B2ZN</span>
+          </div>
+        </div>
+        <div style="margin-top:2rem;background:#fff;border-radius:10px;overflow:hidden;border:1.5px solid var(--border)">
+          <iframe
+            src="https://maps.google.com/maps?q=Post+Office+Lane+Jamal+Road+Patna+800001&output=embed&z=15"
+            width="100%" height="220" style="border:0;display:block" allowfullscreen loading="lazy"
+            title="Onkar Express Office Location">
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form">
+          <h3>Book Your Shipment</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Sender Name</label>
+              <input type="text" placeholder="Your full name" id="senderName"/>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Mobile number" id="senderPhone"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email (optional, for confirmation)</label>
+              <input type="email" placeholder="you@example.com" id="senderEmail"/>
+            </div>
+            <div class="form-group">
+              <label>Payment Method</label>
+              <select id="paymentMethod">
+                <option value="COD">Cash on Pickup/Delivery</option>
+                <option value="online">Pay Online Now</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>From City</label>
+              <select id="fromCity">
+                <option value="">Select city</option>
+                <option>Patna</option>
+                <option>Muzaffarpur</option>
+                <option>Bhagalpur</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>To City</label>
+              <select id="toCity">
+                <option value="">Select destination</option>
+                <option>Bhagalpur</option>
+                <option>Kahalgaon</option>
+                <option>Naugachia</option>
+                <option>Banka</option>
+                <option>Sultanganj</option>
+                <option>Sahebganj</option>
+                <option>Pirpanti</option>
+                <option>Godda</option>
+                <option>Amarpur</option>
+                <option>Jagdishpur</option>
+                <option>Barahat</option>
+                <option>Baunsi</option>
+                <option>Muzaffarpur</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Parcel Type</label>
+              <select id="parcelType">
+                <option>Document</option>
+                <option>Parcel</option>
+                <option>Cargo</option>
+                <option>Fragile Item</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Weight (kg)</label>
+              <input type="number" placeholder="e.g. 2.5" id="weight"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Delivery Address</label>
+            <textarea placeholder="Recipient's complete address..." id="address"></textarea>
+          </div>
+          <div id="rateEstimate" style="display:none;background:#FFF8E1;border:1px solid var(--yellow);border-radius:6px;padding:10px 14px;margin-bottom:1rem;font-size:14px;color:var(--dark)">
+            <strong>Estimated Rate: </strong><span id="rateValue">₹0</span>
+            <span style="color:var(--muted);font-size:12px"> (final rate at pickup)</span>
+          </div>
+          <button class="submit-btn" id="submitBtn" onclick="submitBooking()">
+            <i class="ti ti-send" style="margin-right:6px"></i> Submit Booking Request
+          </button>
+          <div class="success-msg" id="successMsg"></div>
+          <div id="errorMsg" style="display:none;background:#FFEBEE;border:1px solid #EF9A9A;color:#C62828;padding:12px;border-radius:6px;text-align:center;font-size:14px;font-weight:600;margin-top:1rem"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3><span>ONKAR</span> EXPRESS</h3>
+        <p>Bihar's trusted courier and cargo service provider. Connecting cities, delivering trust — from Patna to every corner of Bihar.</p>
+        <div style="margin-top:1rem">
+          <span style="background:rgba(253,216,53,.15);border:1px solid rgba(253,216,53,.2);color:var(--yellow);padding:5px 12px;border-radius:4px;font-size:11px;font-weight:600">GST: 10AMBPK1696B2ZN</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#track">Track Shipment</a></li>
+          <li><a href="#routes">Our Routes</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cities We Serve</h4>
+        <ul>
+          <li><a href="#">Bhagalpur</a></li>
+          <li><a href="#">Kahalgaon</a></li>
+          <li><a href="#">Sultanganj</a></li>
+          <li><a href="#">Muzaffarpur</a></li>
+          <li><a href="#">Godda</a></li>
+          <li><a href="#">Sahebganj</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Onkar Express Courier & Cargo. All rights reserved.</span>
+      <span>Patna – 800001 | onkarexpress123@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

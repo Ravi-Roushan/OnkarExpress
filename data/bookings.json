@@ -1,0 +1,33 @@
+{
+  "bookings": [
+    {
+      "awb": "OE2606308969",
+      "senderName": "Ravi",
+      "senderPhone": "09234132446",
+      "senderEmail": "raviroushan80@gmail.com",
+      "fromCity": "Patna",
+      "toCity": "Bhagalpur",
+      "parcelType": "Parcel",
+      "weight": 1,
+      "address": "new bypass road purbhui delhwan",
+      "rate": 120,
+      "paymentMethod": "COD",
+      "paymentStatus": "cash_on_delivery",
+      "razorpayOrderId": null,
+      "status": "Picked Up from Sender",
+      "createdAt": "2026-06-29T19:49:36.309Z",
+      "history": [
+        {
+          "label": "Booking Confirmed",
+          "time": "2026-06-29T19:49:36.309Z",
+          "done": true
+        },
+        {
+          "label": "Picked Up from Sender",
+          "time": "2026-06-29T19:50:22.867Z",
+          "done": true
+        }
+      ]
+    }
+  ]
+}
