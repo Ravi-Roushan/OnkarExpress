@@ -1,6 +1,30 @@
 {
   "bookings": [
     {
+      "awb": "OE2607017658",
+      "senderName": "ravi",
+      "senderPhone": "09234132446",
+      "senderEmail": "raviroushan80@gmail.com",
+      "fromCity": "Patna",
+      "toCity": "Muzaffarpur",
+      "parcelType": "Parcel",
+      "weight": 100,
+      "address": "mzp",
+      "rate": 2060,
+      "paymentMethod": "COD",
+      "paymentStatus": "cash_on_delivery",
+      "razorpayOrderId": null,
+      "status": "Booking Confirmed",
+      "createdAt": "2026-07-01T08:40:56.391Z",
+      "history": [
+        {
+          "label": "Booking Confirmed",
+          "time": "2026-07-01T08:40:56.391Z",
+          "done": true
+        }
+      ]
+    },
+    {
       "awb": "OE2606308969",
       "senderName": "Ravi",
       "senderPhone": "09234132446",
